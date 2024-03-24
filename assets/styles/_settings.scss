@@ -1,0 +1,44 @@
+@font-face {
+  font-family: Lexend;
+  src: url(../fonts/Lexend_Deca/LexendDeca-Regular.ttf);
+}
+@font-face {
+  font-family: Inter-regular;
+  src: url(../fonts/Inter/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: Inter-bold;
+  src: url(../fonts/Inter/Inter-Bold.ttf);
+}
+
+$font1: Lexend;
+$font2: Inter-regular;
+$font3: Inter-bold;
+
+$white1: rgb(255, 255, 255); /* main, heading, stats*/
+$white2: rgba(255, 255, 255, 0.75); /* main paragraph */
+$white3: rgba(255, 255, 255, 0.6); /* stat heading */
+$color1: rgb(9, 11, 26); /* main background */
+$color2: rgb(27, 25, 56); /* card background */
+$colorAccent: rgb(170, 92, 219); /* accent */
+
+html {
+  font-size: 15px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color1;
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    padding: 10px;
+  }
+}

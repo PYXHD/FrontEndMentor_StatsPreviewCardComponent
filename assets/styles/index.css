@@ -1,0 +1,173 @@
+@font-face {
+  font-family: Lexend;
+  src: url(../fonts/Lexend_Deca/LexendDeca-Regular.ttf);
+}
+@font-face {
+  font-family: Inter-regular;
+  src: url(../fonts/Inter/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: Inter-bold;
+  src: url(../fonts/Inter/Inter-Bold.ttf);
+}
+/* main, heading, stats*/
+/* main paragraph */
+/* stat heading */
+/* main background */
+/* card background */
+/* accent */
+html {
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgb(9, 11, 26);
+}
+@media screen and (max-width: 768px) {
+  body {
+    height: auto;
+    padding: 10px;
+  }
+}
+
+main .card-container {
+  width: calc(100vw - 20px);
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  main .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+main .card-container .left-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: rgb(27, 25, 56);
+  padding: 60px;
+}
+@media screen and (max-width: 1200px) {
+  main .card-container .left-part {
+    text-align: center;
+    padding: 40px;
+  }
+}
+main .card-container .left-part .title-container {
+  padding: 0 120px 25px 0;
+}
+@media screen and (max-width: 1200px) {
+  main .card-container .left-part .title-container {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+}
+main .card-container .left-part .title-container h1 {
+  font-family: Inter-regular;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+main .card-container .left-part .title-container h1 span {
+  color: rgb(170, 92, 219);
+}
+main .card-container .left-part .text-container {
+  padding: 0 130px 50px 0;
+}
+@media screen and (max-width: 1200px) {
+  main .card-container .left-part .text-container {
+    padding: 0;
+    margin-bottom: 60px;
+  }
+}
+main .card-container .left-part .text-container p {
+  font-family: Inter-regular;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 25px;
+}
+main .card-container .left-part .stats-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+@media screen and (max-width: 1200px) {
+  main .card-container .left-part .stats-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .card-container .left-part .stats-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+main .card-container .left-part .stats-container div {
+  font-family: Inter-bold;
+  font-size: 1.6rem;
+  color: rgb(255, 255, 255);
+  line-height: 25px;
+}
+main .card-container .left-part .stats-container div span {
+  font-family: Inter-regular;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+main .card-container .right-part {
+  position: relative;
+  background: center/cover url(../img/image-header-desktop.jpg);
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  main .card-container .right-part {
+    background: center/cover url(../img/image-header-mobile.jpg);
+    height: 300px;
+    width: auto;
+  }
+}
+main .card-container .right-part::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(170, 92, 219);
+  opacity: 0.6;
+}/*# sourceMappingURL=index.css.map */

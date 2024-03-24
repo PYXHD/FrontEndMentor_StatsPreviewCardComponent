@@ -1,0 +1,110 @@
+main {
+  .card-container {
+    width: calc(100vw - 20px);
+    max-width: 1200px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .left-part {
+      display: flex;
+      flex-direction: column;
+      background: $color2;
+      padding: 60px;
+
+      @media screen and (max-width: 1200px) {
+        text-align: center;
+        padding: 40px;
+      }
+
+      .title-container {
+        padding: 0 120px 25px 0;
+
+        @media screen and (max-width: 1200px) {
+          padding: 0;
+          margin-bottom: 30px;
+        }
+
+        h1 {
+          font-family: $font2;
+          font-size: 2rem;
+          color: $white1;
+
+          span {
+            color: $colorAccent;
+          }
+        }
+      }
+
+      .text-container {
+        padding: 0 130px 50px 0;
+
+        @media screen and (max-width: 1200px) {
+          padding: 0;
+          margin-bottom: 60px;
+        }
+
+        p {
+          font-family: $font2;
+          color: $white2;
+          line-height: 25px;
+        }
+      }
+
+      .stats-container {
+        display: flex;
+        gap: 50px;
+
+        @media screen and (max-width: 1200px) {
+          justify-content: center;
+        }
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+        }
+
+        div {
+          font-family: $font3;
+          font-size: 1.6rem;
+          color: $white1;
+          line-height: 25px;
+
+          span {
+            font-family: $font2;
+            font-size: 0.875rem;
+            color: $white3;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .right-part {
+      position: relative;
+      background: center/cover url(../img/image-header-desktop.jpg);
+      width: 100%;
+
+      @media screen and (max-width: 768px) {
+        background: center/cover url(../img/image-header-mobile.jpg);
+        height: 300px;
+        width: auto;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: $colorAccent;
+        opacity: 0.6;
+      }
+    }
+  }
+}
